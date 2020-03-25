@@ -1,0 +1,67 @@
+name: diagon
+description: Global competitive eSports ecosystem
+version: 1.0.3+5
+
+environment:
+  sdk: ">=2.1.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  cupertino_icons: ^0.1.2
+  modal_progress_hud: ^0.1.3
+  font_awesome_flutter: ^8.5.0
+  shared_preferences: ^0.5.6+1
+  http: ^0.12.0+4
+  redux: ^4.0.0
+  flutter_redux: ^0.6.0
+  redux_thunk: ^0.3.0
+  redux_logging: ^0.4.0
+  badges: ^1.1.0
+  flutter_paystack: ^1.0.3+1
+  simple_animations: ^1.3.3
+  jwt_decode: ^0.1.0
+  page_transition: ^1.1.4
+  url_launcher: ^5.4.2
+  flutter_masked_text: ^0.8.0
+  random_string: ^2.0.1
+  barcode_scan: ^2.0.1
+  qr_flutter: ^3.1.0
+  clipboard_manager: ^0.0.1
+  flutter_launcher_icons: ^0.7.3
+  sqflite: ^1.2.2+1
+  path_provider: ^1.6.5
+  datetime_picker_formfield: ^1.0.0
+
+
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+flutter:
+
+  uses-material-design: true
+
+  assets:
+    - images/
+
+  fonts:
+    - family: Google Sans
+      fonts:
+        - asset: fonts/GoogleSans-Regular.ttf
+
+    - family: Google Sans Medium
+      fonts:
+        - asset: fonts/GoogleSans-Medium.ttf
+
+    - family: Google Sans Bold
+      fonts:
+        - asset: fonts/GoogleSans-Bold.ttf
+
+flutter_icons:
+  android: "launcher_icon"
+  image_path: "images/icon/icon.png"
+  adaptive_icon_background: "images/icon/background.png"
+  adaptive_icon_foreground: "images/icon/foreground.png"

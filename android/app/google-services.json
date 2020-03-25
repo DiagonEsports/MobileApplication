@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "125379053098",
+    "firebase_url": "https://diagon-fe87f.firebaseio.com",
+    "project_id": "diagon-fe87f",
+    "storage_bucket": "diagon-fe87f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:125379053098:android:1a8fa2859154c5c6f2e553",
+        "android_client_info": {
+          "package_name": "io.diagon.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "125379053098-hgqi7s4kkvaib8f365jul467coelrdg5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC0kCB8CfIaC1_H2Jx-ZmusCloG6UMg-hY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "125379053098-hgqi7s4kkvaib8f365jul467coelrdg5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
