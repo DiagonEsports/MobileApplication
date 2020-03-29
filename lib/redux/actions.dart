@@ -22,6 +22,7 @@ ThunkAction<AppState> getUserAction = (Store<AppState> store) async {
 ThunkAction<AppState> logoutUserAction = (Store<AppState> store) async {
   final prefs = await SharedPreferences.getInstance();
   await prefs.remove('user');
+  await prefs.remove('pin');
   User user;
   store.dispatch(LogoutUserAction(user));
 };

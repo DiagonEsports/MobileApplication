@@ -1,13 +1,17 @@
 import 'package:diagon/redux/actions.dart';
 import 'package:diagon/screens/account.dart';
 import 'package:diagon/screens/activity.dart';
+import 'package:diagon/screens/confirm_pin.dart';
 import 'package:diagon/screens/forgot_password.dart';
+import 'package:diagon/screens/new_pin.dart';
 import 'package:diagon/screens/password.dart';
 import 'package:diagon/screens/password_verification_code.dart';
+import 'package:diagon/screens/pin.dart';
 import 'package:diagon/screens/reset_password.dart';
 import 'package:diagon/screens/send_verification_code.dart';
 import 'package:diagon/screens/verification_code.dart';
 import 'package:diagon/screens/wallet.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import 'screens/fund_wallet.dart';
 import 'package:diagon/redux/reducers.dart';
 import 'package:diagon/screens/home.dart';
@@ -25,16 +29,27 @@ import 'package:redux_thunk/redux_thunk.dart';
 
 import 'models/app_state.dart';
 
-void main() {
-  final store = Store<AppState>(appReducer,
-      initialState: AppState.initial(),
-      middleware: [thunkMiddleware, LoggingMiddleware.printer()]);
-  runApp(MyApp(store: store));
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  SharedPreferences prefs = await SharedPreferences.getInstance();
+  String pin = prefs.getString('pin');
+
+  final store = Store<AppState>(
+    appReducer,
+    initialState: AppState.initial(),
+    middleware: [
+      thunkMiddleware,
+      LoggingMiddleware.printer(),
+    ],
+  );
+
+  runApp(MyApp(store: store, pin: pin));
 }
 
 class MyApp extends StatelessWidget {
   final Store<AppState> store;
-  MyApp({this.store});
+  final String pin;
+  MyApp({this.store, this.pin});
 
   @override
   Widget build(BuildContext context) {
@@ -46,10 +61,13 @@ class MyApp extends StatelessWidget {
           primaryColor: Color(0xFF101322),
           scaffoldBackgroundColor: Color(0xFF101322),
         ),
-        initialRoute: Welcome.id,
+        initialRoute: pin == null ? Welcome.id : Pin.id,
         routes: {
           Welcome.id: (context) => Welcome(),
           Login.id: (context) => Login(),
+          Pin.id: (context) => Pin(),
+          NewPin.id: (context) => NewPin(),
+          ConfirmPin.id: (context) => ConfirmPin(),
           Register.id: (context) => Register(),
           Home.id: (context) => Home(
                 onInit: () {

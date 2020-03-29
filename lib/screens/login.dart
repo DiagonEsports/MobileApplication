@@ -1,8 +1,9 @@
 import 'dart:convert';
+import 'package:diagon/screens/new_pin.dart';
 import 'package:diagon/screens/welcome.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
-import 'package:diagon/screens/home.dart';
+
 import 'package:jwt_decode/jwt_decode.dart';
 import 'package:diagon/constants/constants.dart';
 import 'package:diagon/widgets/primary_button.dart';
@@ -92,9 +93,7 @@ class _LoginState extends State<Login> {
   }
 
   void _redirectUser() {
-    Future.delayed(Duration(seconds: 2), () {
-      Navigator.pushReplacementNamed(context, Home.id);
-    });
+    Navigator.pushReplacementNamed(context, NewPin.id);
   }
 
   @override
@@ -228,10 +227,10 @@ class _LoginState extends State<Login> {
                   ),
                   FlatButton(
                     child: Text(
-                      'Forgot your password?',
+                      'Forgot your password? Click Here',
                       style: TextStyle(
                         color: Colors.blue,
-                        fontSize: 17.0,
+                        fontSize: 16.0,
                         letterSpacing: 0.5,
                         fontFamily: 'Google Sans Medium',
                       ),

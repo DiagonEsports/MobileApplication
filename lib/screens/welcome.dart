@@ -76,7 +76,7 @@ class _WelcomeState extends State<Welcome> with SingleTickerProviderStateMixin {
                     ),
                   ),
                   SizedBox(
-                    height: MediaQuery.of(context).size.height / 4,
+                    height: MediaQuery.of(context).size.height / 4.25,
                   ),
                   Column(
                     children: <Widget>[

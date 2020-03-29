@@ -22,8 +22,8 @@ class TournamentDetails extends StatefulWidget {
 
 class TournamentDetailsState extends State<TournamentDetails> {
   final _scaffoldKey = GlobalKey<ScaffoldState>();
-  final Tournament tournament;
 
+  final Tournament tournament;
   TournamentDetailsState({this.tournament});
 
   bool _showSpinner = false;

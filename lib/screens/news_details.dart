@@ -15,8 +15,8 @@ class NewsDetails extends StatefulWidget {
 
 class NewsDetailsState extends State<NewsDetails> {
   final _scaffoldKey = GlobalKey<ScaffoldState>();
-  final News news;
 
+  final News news;
   NewsDetailsState({this.news});
 
   bool _showSpinner = false;
