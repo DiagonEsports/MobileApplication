@@ -1,5 +1,5 @@
-import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
+import 'package:flutter/material.dart';
 import 'package:diagon/models/transaction.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
@@ -39,14 +39,14 @@ class ActivityItem extends StatelessWidget {
                           width: 35.0,
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(100.0),
-                            color: Color(0XFFED0101).withOpacity(0.5),
+                            color: Colors.green.withOpacity(0.75),
                           ),
                           child: Icon(
                             transaction.transactionType == 'Joined Tournament'
                                 ? FontAwesomeIcons.signInAlt
                                 : FontAwesomeIcons.signOutAlt,
                             color: Color(0XFFE8E8E8),
-                            size: 22.5,
+                            size: 20.0,
                           ),
                         ),
                       ],
@@ -69,7 +69,11 @@ class ActivityItem extends StatelessWidget {
                           height: 2.0,
                         ),
                         Text(
-                          transaction.entryFee == 0 ? 'Free' : '50 DGN',
+                          transaction.entryFee == 0
+                              ? 'Free'
+                              : transaction.platform == 'DGN'
+                                  ? '${transaction.sentAmount} DGN'
+                                  : '${transaction.sentAmount} ETH',
                           style: TextStyle(
                             fontSize: 17.0,
                             fontFamily: 'Google Sans',

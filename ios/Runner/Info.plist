@@ -24,6 +24,10 @@
 	<true/>
 	<key>NSCameraUsageDescription</key>
 	<string>App requires access to camera for scanning QR Codes for easing transactions</string>
+	<key>NSFaceIDUsageDescription</key>
+    <string>App works with user permission using FaceID if available for easy and quick authentication</string>
+    <key>NSTouchIDUsageDescription</key>
+    <string>App works with user permission using TouchID if available for easy and quick authentication</string>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>

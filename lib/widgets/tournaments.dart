@@ -12,6 +12,8 @@ class _TournamentsState extends State<Tournaments> {
   @override
   Widget build(BuildContext context) {
     final Orientation orientation = MediaQuery.of(context).orientation;
+    final double aspectRatio =
+        MediaQuery.of(context).size.height / MediaQuery.of(context).size.width;
 
     return StoreConnector<AppState, AppState>(
       converter: (store) => store.state,
@@ -27,8 +29,9 @@ class _TournamentsState extends State<Tournaments> {
             itemCount: state.tournaments.length,
             gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
               crossAxisCount: orientation == Orientation.portrait ? 2 : 3,
-              childAspectRatio:
-                  orientation == Orientation.portrait ? 5.15 / 6 : 5.15 / 5.25,
+              childAspectRatio: orientation == Orientation.portrait
+                  ? aspectRatio <= 1.8 ? 4.5 / 6 : 5.15 / 6
+                  : 5.15 / 5.25,
               mainAxisSpacing: 5.0,
               crossAxisSpacing: 2.0,
             ),

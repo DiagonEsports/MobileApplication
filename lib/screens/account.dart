@@ -1,4 +1,3 @@
-import 'package:diagon/animations/fade_animation.dart';
 import 'package:diagon/constants/constants.dart';
 import 'package:diagon/models/app_state.dart';
 import 'package:diagon/redux/actions.dart';
@@ -8,8 +7,10 @@ import 'package:diagon/screens/login.dart';
 import 'package:diagon/screens/news.dart';
 import 'package:diagon/screens/password.dart';
 import 'package:diagon/screens/wallet.dart';
+import 'package:diagon/screens/welcome.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_redux/flutter_redux.dart';
+import 'package:diagon/animations/fade_animation.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -42,7 +43,7 @@ class _AccountState extends State<Account> {
             child: Scaffold(
               appBar: AppBar(
                 title: Text(
-                  'User Account',
+                  'Account',
                   style: TextStyle(
                     fontFamily: 'Google Sans Medium',
                     fontSize: 20.0,
@@ -51,7 +52,9 @@ class _AccountState extends State<Account> {
                 leading: Builder(
                   builder: (BuildContext context) {
                     return IconButton(
-                      icon: Icon(FontAwesomeIcons.stream),
+                      icon: Icon(
+                        FontAwesomeIcons.bars,
+                      ),
                       onPressed: () {
                         Scaffold.of(context).openDrawer();
                       },
@@ -60,7 +63,10 @@ class _AccountState extends State<Account> {
                 ),
                 actions: <Widget>[
                   IconButton(
-                    icon: Icon(FontAwesomeIcons.bell),
+                    icon: Icon(
+                      FontAwesomeIcons.bell,
+                      size: 20.0,
+                    ),
                     onPressed: () {},
                   ),
                 ],
@@ -310,6 +316,7 @@ class _AccountState extends State<Account> {
                           Navigator.pop(context);
                           StoreProvider.of<AppState>(context)
                               .dispatch(logoutUserAction);
+                          Navigator.pushReplacementNamed(context, Welcome.id);
                         },
                         child: ListTile(
                           title: Text(
@@ -777,6 +784,8 @@ class _AccountState extends State<Account> {
                                   onTap: () async {
                                     StoreProvider.of<AppState>(context)
                                         .dispatch(logoutUserAction);
+                                    Navigator.pushReplacementNamed(
+                                        context, Welcome.id);
                                   },
                                   child: Row(
                                     crossAxisAlignment:
@@ -834,7 +843,7 @@ class _AccountState extends State<Account> {
                                             MainAxisAlignment.spaceEvenly,
                                         children: <Widget>[
                                           Text(
-                                            'Version 1.0.3',
+                                            'Version 1.0.4',
                                             style: TextStyle(
                                               fontSize: 16.0,
                                               fontFamily: 'Google Sans',

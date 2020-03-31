@@ -126,7 +126,7 @@ class _LoginState extends State<Login> {
               'Account Login',
               style: TextStyle(
                 fontFamily: 'Google Sans Medium',
-                fontSize: 22.5,
+                fontSize: 20.0,
               ),
             ),
           ),

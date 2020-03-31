@@ -1,6 +1,6 @@
 name: diagon
 description: Global competitive eSports ecosystem
-version: 1.0.3+5
+version: 1.0.5+7
 
 environment:
   sdk: ">=2.1.0 <3.0.0"

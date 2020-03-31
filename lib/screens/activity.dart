@@ -6,6 +6,7 @@ import 'package:diagon/screens/home.dart';
 import 'package:diagon/screens/login.dart';
 import 'package:diagon/screens/news.dart';
 import 'package:diagon/screens/wallet.dart';
+import 'package:diagon/screens/welcome.dart';
 import 'package:diagon/widgets/activity_item.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_redux/flutter_redux.dart';
@@ -52,7 +53,7 @@ class _ActivityState extends State<Activity> {
                 leading: Builder(
                   builder: (BuildContext context) {
                     return IconButton(
-                      icon: Icon(FontAwesomeIcons.stream),
+                      icon: Icon(FontAwesomeIcons.bars),
                       onPressed: () {
                         Scaffold.of(context).openDrawer();
                       },
@@ -61,7 +62,10 @@ class _ActivityState extends State<Activity> {
                 ),
                 actions: <Widget>[
                   IconButton(
-                    icon: Icon(FontAwesomeIcons.bell),
+                    icon: Icon(
+                      FontAwesomeIcons.bell,
+                      size: 20.0,
+                    ),
                     onPressed: () {},
                   ),
                 ],
@@ -311,6 +315,7 @@ class _ActivityState extends State<Activity> {
                           Navigator.pop(context);
                           StoreProvider.of<AppState>(context)
                               .dispatch(logoutUserAction);
+                          Navigator.pushReplacementNamed(context, Welcome.id);
                         },
                         child: ListTile(
                           title: Text(

@@ -45,7 +45,7 @@ class CenteredButton extends StatelessWidget {
                 Icon(
                   icon,
                   color: iconColor,
-                  size: 22.5,
+                  size: 20.0,
                 ),
                 SizedBox(
                   width: 10.0,
@@ -54,7 +54,7 @@ class CenteredButton extends StatelessWidget {
                   title,
                   style: TextStyle(
                     fontFamily: 'Google Sans',
-                    fontSize: 20.0,
+                    fontSize: 18.0,
                     color: textColor,
                   ),
                 ),

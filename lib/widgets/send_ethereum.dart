@@ -163,7 +163,7 @@ class _SendEthereumState extends State<SendEthereum> {
                         textAlign: TextAlign.center,
                         style: TextStyle(
                           fontFamily: 'Google Sans Bold',
-                          fontSize: 25.0,
+                          fontSize: 22.5,
                           color: Colors.black.withOpacity(0.8),
                         ),
                       ),

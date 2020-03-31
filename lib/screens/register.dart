@@ -148,7 +148,7 @@ class _RegisterState extends State<Register> {
               'Create Account',
               style: TextStyle(
                 fontFamily: 'Google Sans Medium',
-                fontSize: 22.5,
+                fontSize: 20.0,
               ),
             ),
           ),

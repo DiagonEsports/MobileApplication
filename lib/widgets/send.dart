@@ -161,7 +161,7 @@ class _SendState extends State<Send> {
                         textAlign: TextAlign.center,
                         style: TextStyle(
                           fontFamily: 'Google Sans Bold',
-                          fontSize: 25.0,
+                          fontSize: 22.5,
                           color: Colors.black.withOpacity(0.8),
                         ),
                       ),
@@ -185,7 +185,8 @@ class _SendState extends State<Send> {
                           textAlign: TextAlign.center,
                           style: TextStyle(
                             fontSize: 16.0,
-                            fontFamily: 'Google Sans Medium',
+                            fontFamily: 'Google Sans',
+                            fontWeight: FontWeight.w500,
                             color: Colors.black.withOpacity(0.75),
                           ),
                         ),

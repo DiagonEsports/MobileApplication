@@ -42,7 +42,7 @@ class _ReceiveState extends State<Receive> {
                     textAlign: TextAlign.center,
                     style: TextStyle(
                       fontFamily: 'Google Sans Bold',
-                      fontSize: 25.0,
+                      fontSize: 22.5,
                       color: Colors.black.withOpacity(0.8),
                     ),
                   ),

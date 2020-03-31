@@ -124,7 +124,7 @@ class _ForgotPasswordState extends State<ForgotPassword> {
               'Forgot Password',
               style: TextStyle(
                 fontFamily: 'Google Sans Medium',
-                fontSize: 22.5,
+                fontSize: 20.0,
               ),
             ),
           ),
@@ -141,7 +141,7 @@ class _ForgotPasswordState extends State<ForgotPassword> {
                 mainAxisSize: MainAxisSize.min,
                 children: <Widget>[
                   SizedBox(
-                    height: 150.0,
+                    height: 50.0,
                   ),
                   Text(
                     'We need your email address',

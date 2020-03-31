@@ -132,7 +132,7 @@ class _PasswordState extends State<Password> {
               'Change Password',
               style: TextStyle(
                 fontFamily: 'Google Sans Medium',
-                fontSize: 22.5,
+                fontSize: 20.0,
               ),
             ),
           ),

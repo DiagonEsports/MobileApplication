@@ -25,6 +25,8 @@ class _WelcomeState extends State<Welcome> with SingleTickerProviderStateMixin {
 
   @override
   Widget build(BuildContext context) {
+    final double aspectRatio =
+        MediaQuery.of(context).size.height / MediaQuery.of(context).size.width;
     return Theme(
       data: Theme.of(context).copyWith(
         accentColor: Color(0XFFED0101),
@@ -76,7 +78,9 @@ class _WelcomeState extends State<Welcome> with SingleTickerProviderStateMixin {
                     ),
                   ),
                   SizedBox(
-                    height: MediaQuery.of(context).size.height / 4.25,
+                    height: aspectRatio <= 1.8
+                        ? MediaQuery.of(context).size.height / 4.25
+                        : MediaQuery.of(context).size.height / 3.0,
                   ),
                   Column(
                     children: <Widget>[

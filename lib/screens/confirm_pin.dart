@@ -40,7 +40,7 @@ class _ConfirmPinState extends State<ConfirmPin> {
             ),
             child: Container(
               padding: EdgeInsets.symmetric(
-                horizontal: 20.0,
+                horizontal: 5.0,
                 vertical: 20.0,
               ),
               child: Column(
@@ -49,7 +49,7 @@ class _ConfirmPinState extends State<ConfirmPin> {
                     height: 25.0,
                   ),
                   Text(
-                    'Confirm your PIN Code',
+                    'Confirm PIN Code',
                     style: TextStyle(
                       fontSize: 22.5,
                       fontFamily: 'Google Sans Medium',
@@ -60,7 +60,7 @@ class _ConfirmPinState extends State<ConfirmPin> {
                   ),
                   PinPut(
                     fieldsCount: 4,
-                    autoFocus: false,
+                    autoFocus: true,
                     isTextObscure: true,
                     unFocusWhen: _unFocus,
                     onSubmit: (String confirmPin) =>

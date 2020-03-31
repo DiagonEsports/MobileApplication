@@ -1,4 +1,5 @@
 import 'package:diagon/redux/actions.dart';
+import 'package:diagon/screens/welcome.dart';
 import 'package:diagon/widgets/receive.dart';
 import 'package:diagon/constants/constants.dart';
 import 'package:diagon/widgets/send.dart';
@@ -6,7 +7,6 @@ import 'package:intl/intl.dart';
 import 'package:diagon/models/app_state.dart';
 import 'package:diagon/screens/account.dart';
 import 'package:diagon/screens/activity.dart';
-import 'package:diagon/screens/login.dart';
 import 'package:diagon/screens/news.dart';
 import 'package:diagon/screens/wallet.dart';
 import 'package:flutter/material.dart';
@@ -26,8 +26,6 @@ class Home extends StatefulWidget {
 
 class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
   final _scaffoldKey = GlobalKey<ScaffoldState>();
-
-  bool _showSpinner = false;
 
   void initState() {
     super.initState();
@@ -69,7 +67,7 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
                   builder: (BuildContext context) {
                     return IconButton(
                       icon: Icon(
-                        FontAwesomeIcons.stream,
+                        FontAwesomeIcons.bars,
                         size: 25.0,
                       ),
                       onPressed: () {
@@ -80,7 +78,10 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
                 ),
                 actions: <Widget>[
                   IconButton(
-                    icon: Icon(FontAwesomeIcons.bell),
+                    icon: Icon(
+                      FontAwesomeIcons.bell,
+                      size: 20.0,
+                    ),
                     onPressed: () {},
                   ),
                 ],
@@ -330,7 +331,7 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
                           Navigator.pop(context);
                           StoreProvider.of<AppState>(context)
                               .dispatch(logoutUserAction);
-                          Navigator.pushReplacementNamed(context, Login.id);
+                          Navigator.pushReplacementNamed(context, Welcome.id);
                         },
                         child: ListTile(
                           title: Text(
@@ -386,7 +387,7 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
                                             'Wallet Balance',
                                             style: TextStyle(
                                               color: Colors.white,
-                                              fontSize: 22.5,
+                                              fontSize: 20.0,
                                               fontFamily: 'Google Sans',
                                             ),
                                           ),
@@ -409,7 +410,7 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
                                             style: TextStyle(
                                               color: Colors.white,
                                               fontFamily: 'Google Sans Bold',
-                                              fontSize: 37.5,
+                                              fontSize: 35.0,
                                               fontWeight: FontWeight.bold,
                                             ),
                                           ),
@@ -421,7 +422,7 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
                                             style: TextStyle(
                                               color: Color(0XFFED0101),
                                               fontFamily: 'Google Sans Bold',
-                                              fontSize: 35,
+                                              fontSize: 32.5,
                                               fontWeight: FontWeight.bold,
                                             ),
                                           ),
@@ -442,7 +443,7 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
                                             style: TextStyle(
                                               color: Colors.white,
                                               fontFamily: 'Google Sans',
-                                              fontSize: 18,
+                                              fontSize: 18.0,
                                             ),
                                           ),
                                           SizedBox(
@@ -495,6 +496,7 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
                                       icon: Icon(
                                         FontAwesomeIcons.levelDownAlt,
                                         color: Color(0XFF2ECC71),
+                                        size: 18.0,
                                       ),
                                       elevation: 0.0,
                                       label: Text(
@@ -524,6 +526,7 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
                                       icon: Icon(
                                         FontAwesomeIcons.levelUpAlt,
                                         color: Color(0XFF2ECC71),
+                                        size: 18.0,
                                       ),
                                       elevation: 0.0,
                                       label: Text(

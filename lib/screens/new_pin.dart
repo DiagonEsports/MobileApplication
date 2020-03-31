@@ -32,7 +32,7 @@ class _NewPinState extends State<NewPin> {
             ),
             child: Container(
               padding: EdgeInsets.symmetric(
-                horizontal: 15.0,
+                horizontal: 5.0,
                 vertical: 20.0,
               ),
               child: Column(
@@ -52,12 +52,15 @@ class _NewPinState extends State<NewPin> {
                   ),
                   PinPut(
                     fieldsCount: 4,
-                    autoFocus: false,
+                    autoFocus: true,
                     isTextObscure: true,
                     unFocusWhen: _unFocus,
                     onSubmit: (String newPin) => _onSubmit(newPin),
-                    onClear: (String s) =>
-                        _showSnackBar('Cleared pin entry', context, Colors.red),
+                    onClear: (String s) => _showSnackBar(
+                      'Cleared pin entry',
+                      context,
+                      Colors.red,
+                    ),
                   ),
                 ],
               ),

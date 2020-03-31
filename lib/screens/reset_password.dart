@@ -145,7 +145,7 @@ class _ResetPasswordState extends State<ResetPassword> {
                   'Reset Password',
                   style: TextStyle(
                     fontFamily: 'Google Sans Medium',
-                    fontSize: 22.5,
+                    fontSize: 20.0,
                   ),
                 ),
               ),

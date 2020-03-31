@@ -67,7 +67,7 @@ class _WalletState extends State<Wallet> {
                 leading: Builder(
                   builder: (BuildContext context) {
                     return IconButton(
-                      icon: Icon(FontAwesomeIcons.stream),
+                      icon: Icon(FontAwesomeIcons.bars),
                       onPressed: () {
                         Scaffold.of(context).openDrawer();
                       },
@@ -76,7 +76,10 @@ class _WalletState extends State<Wallet> {
                 ),
                 actions: <Widget>[
                   IconButton(
-                    icon: Icon(FontAwesomeIcons.bell),
+                    icon: Icon(
+                      FontAwesomeIcons.bell,
+                      size: 20.0,
+                    ),
                     onPressed: () {},
                   ),
                 ],
@@ -348,7 +351,6 @@ class _WalletState extends State<Wallet> {
               body: Container(
                 padding: EdgeInsets.symmetric(
                   horizontal: 20.0,
-                  vertical: 10.0,
                 ),
                 child: SingleChildScrollView(
                   scrollDirection: Axis.vertical,
@@ -675,15 +677,15 @@ class _WalletState extends State<Wallet> {
                                               "Currently not Available",
                                               textAlign: TextAlign.center,
                                               style: TextStyle(
-                                                fontSize: 18.0,
+                                                fontSize: 20.0,
                                                 fontFamily: 'Google Sans Bold',
                                               ),
                                             ),
                                             content: Text(
-                                              "You will be notified by email when this feature is available.",
+                                              "You will receive a notification when this feature is available.",
                                               textAlign: TextAlign.center,
                                               style: TextStyle(
-                                                fontSize: 14.0,
+                                                fontSize: 15.0,
                                                 fontFamily: 'Google Sans',
                                               ),
                                             ),

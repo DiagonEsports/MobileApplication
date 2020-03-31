@@ -52,7 +52,9 @@ class _NewsState extends State<News> {
                     leading: Builder(
                       builder: (BuildContext context) {
                         return IconButton(
-                          icon: Icon(FontAwesomeIcons.stream),
+                          icon: Icon(
+                            FontAwesomeIcons.bars,
+                          ),
                           onPressed: () {
                             Scaffold.of(context).openDrawer();
                           },
@@ -61,7 +63,10 @@ class _NewsState extends State<News> {
                     ),
                     actions: <Widget>[
                       IconButton(
-                        icon: Icon(FontAwesomeIcons.bell),
+                        icon: Icon(
+                          FontAwesomeIcons.bell,
+                          size: 20.0,
+                        ),
                         onPressed: () {},
                       ),
                     ],
