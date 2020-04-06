@@ -18,7 +18,6 @@ dependencies:
   flutter_redux: ^0.6.0
   redux_thunk: ^0.3.0
   redux_logging: ^0.4.0
-  badges: ^1.1.0
   flutter_paystack: ^1.0.3+1
   simple_animations: ^1.3.3
   jwt_decode: ^0.1.0

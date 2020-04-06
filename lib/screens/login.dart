@@ -3,7 +3,6 @@ import 'package:diagon/screens/new_pin.dart';
 import 'package:diagon/screens/welcome.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
-
 import 'package:jwt_decode/jwt_decode.dart';
 import 'package:diagon/constants/constants.dart';
 import 'package:diagon/widgets/primary_button.dart';

@@ -139,9 +139,10 @@ class _FundWalletState extends State<FundWallet> {
                     child: Column(
                       children: <Widget>[
                         TextFormField(
-                          onSaved: (value) {
-                            amount = moneyMask.numberValue.toInt();
-                          },
+                          onSaved: (value) =>
+                              amount = moneyMask.numberValue.toInt(),
+                          validator: (value) =>
+                              value.length < 6 ? 'Amount is required' : null,
                           controller: moneyMask,
                           keyboardType: TextInputType.number,
                           inputFormatters: <TextInputFormatter>[
